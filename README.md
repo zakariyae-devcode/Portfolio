@@ -56,8 +56,6 @@
 │   ├── app/                 # صفحات وسيارات Next.js App Router
 │   ├── components/          # المكونات المكررة (Navbar, Footer, Project Cards)
 │   ├── context/             # إدارة الحالة العامة (LanguageContext)
-│   ├── config/              # البيانات والإعدادات الثابتة (Projects Data, Bio)
-│   
 ├── public/                  # الصور والوسائط الثابتة
 ├── package.json
 └── README.md
