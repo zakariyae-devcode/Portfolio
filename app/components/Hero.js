@@ -42,8 +42,8 @@ export default function Hero() {
             {/* سطر تعريفي قصير */}
             <p className="text-warning fs-5 fw-medium mb-3">
               {lang === 'ar'
-                ? 'موظف إداري تحوّل إلى مطور ويب شامل، أبني أدوات تحل مشاكل حقيقية في سير العمل'
-                : 'Administrative employee turned full-stack developer, building tools that solve real workflow problems'}
+                ? ' مطور ويب شامل، أبني أدوات تحل مشاكل حقيقية في سير العمل'
+                : ' full-stack developer, building tools that solve real workflow problems'}
             </p>
 
             {/* شارة الانفتاح على الفرص */}
