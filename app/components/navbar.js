@@ -88,7 +88,7 @@ export default function Navbar() {
               <li className="nav-item">
                 <Link className="nav-link text-white fw-semibold px-3" href="#contact">
                   <span className="text-warning me-1 fs-7">❖</span> 
-                  {lang === 'ar' ? 'التواصل' : 'Contact'}
+                  {lang === 'ar' ? 'تواصل معي' : 'Contact'}
                 </Link>
               </li>
             </ul>
