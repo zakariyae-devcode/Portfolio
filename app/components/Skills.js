@@ -6,43 +6,31 @@ import { useLanguage } from '../context/LanguageContext';
 export default function Skills() {
   const { lang } = useLanguage();
 
-  const skillCategories = [
+  const skillGroups = [
     {
-      title: lang === 'ar' ? 'تطوير الواجهات الخلفية (Backend)' : 'Backend Development',
-      skills: [
-        { name: 'Laravel', level: 50 },
-        { name: 'Django', level: 75 },
-        { name: 'FastAPI', level: 45 },
-        { name: 'Express.js', level: 50 },
-      ]
+      key: 'strong',
+      icon: '۞',
+      title: lang === 'ar' ? 'إتقان قوي' : 'Strong',
+      subtitle: lang === 'ar' ? 'أستخدمها يومياً في مشاريعي' : 'Used daily in my projects',
+      tagClass: 'bg-warning text-dark border-warning fw-bold',
+      skills: ['Python', 'Django', 'MySQL', 'PostgreSQL', 'Git & GitHub', 'Bootstrap'],
     },
     {
-      title: lang === 'ar' ? 'تطوير الواجهات الأمامية (Frontend)' : 'Frontend Development',
-      skills: [
-        { name: 'React.js', level: 70 },
-        { name: 'Next.js', level: 70 },
-        { name: 'Tailwind CSS', level: 50 },
-        { name: 'Bootstrap', level: 75 }
-      ]
+      key: 'working',
+      icon: '❖',
+      title: lang === 'ar' ? 'معرفة عملية' : 'Working knowledge',
+      subtitle: lang === 'ar' ? 'استخدمتها في مشاريع حقيقية' : 'Applied in real projects',
+      tagClass: 'bg-warning bg-opacity-10 text-warning border-warning border-opacity-50 fw-semibold',
+      skills: ['React.js', 'Next.js', 'JavaScript', 'Laravel', 'Express.js', 'Linux', 'Tailwind CSS', 'PHP'],
     },
     {
-      title: lang === 'ar' ? 'لغات البرمجة' : 'Programming Languages',
-      skills: [
-        { name: 'Python', level: 80 },
-        { name: 'JavaScript', level: 70 },
-        { name: 'PHP', level: 50 },
-        { name: 'C#', level: 40 }
-      ]
+      key: 'learning',
+      icon: '♦',
+      title: lang === 'ar' ? 'قيد التعلّم' : 'Learning',
+      subtitle: lang === 'ar' ? 'أطوّر مهاراتي فيها حالياً' : 'Currently building up',
+      tagClass: 'bg-transparent text-white-50 border-warning border-opacity-25 fw-medium',
+      skills: ['FastAPI', 'C#'],
     },
-    {
-      title: lang === 'ar' ? 'قواعد البيانات والأدوات النظامية' : 'Databases & System Tools',
-      skills: [
-        { name: 'MySQL', level: 80 },
-        { name: 'PostgreSQL', level: 80 },
-        { name: 'Git & GitHub', level: 75 },
-        { name: 'Linux', level: 60 }
-      ]
-    }
   ];
 
   return (
@@ -59,17 +47,17 @@ export default function Skills() {
             <span>۞</span>
           </div>
           <h2 className="display-5 fw-bold text-white mb-2">
-            {lang === 'ar' ? 'المهارات والنسب التقنية' : 'Skills & Proficiency'}
+            {lang === 'ar' ? 'المهارات والتقنيات' : 'Skills & Tech Stack'}
           </h2>
           <p className="text-white-50 fs-6">
-            {lang === 'ar' ? 'مستوى التمكن والخبرة العملية في الأدوات والأنظمة البرمجية' : 'Level of mastery and practical experience in software tools & systems'}
+            {lang === 'ar' ? 'الأدوات والأنظمة البرمجية مصنّفة حسب مستوى الخبرة العملية' : 'Software tools & systems grouped by hands-on experience'}
           </p>
         </div>
 
-        {/* شبكة التصنيفات مع أشرطة النسب */}
+        {/* مجموعات المهارات */}
         <div className="row g-4">
-          {skillCategories.map((category, index) => (
-            <div key={index} className="col-lg-3 col-md-6">
+          {skillGroups.map((group) => (
+            <div key={group.key} className="col-lg-4 col-md-6">
               <div 
                 className="card h-100 border-warning border-opacity-25 text-white p-4 shadow-lg position-relative overflow-hidden"
                 style={{
@@ -87,41 +75,26 @@ export default function Skills() {
                 </div>
 
                 <div className="card-body p-0">
-                  <h3 className="fs-5 fw-bold text-warning mb-4 pb-2 border-bottom border-warning border-opacity-25">
-                    {category.title}
-                  </h3>
-                  
-                  {/* قائمة المهارات مع أشرطة النسبة */}
-                  <div className="d-flex flex-column gap-3">
-                    {category.skills.map((skill, idx) => (
-                      <div key={idx}>
-                        <div className="d-flex justify-content-between text-white fs-6 mb-1">
-                          <span className="fw-medium">{skill.name}</span>
-                          <span className="text-warning fw-bold">{skill.level}%</span>
-                        </div>
-                        
-                        {/* شريط التقدم */}
-                        <div 
-                          className="progress w-100" 
-                          style={{ height: '8px', backgroundColor: 'rgba(255, 255, 255, 0.1)', borderRadius: '4px' }}
-                        >
-                          <div 
-                            className="progress-bar bg-warning" 
-                            role="progressbar" 
-                            style={{ 
-                              width: `${skill.level}%`, 
-                              borderRadius: '4px',
-                              boxShadow: '0 0 10px rgba(255, 193, 7, 0.4)'
-                            }} 
-                            aria-valuenow={skill.level} 
-                            aria-valuemin="0" 
-                            aria-valuemax="100"
-                          ></div>
-                        </div>
-                      </div>
-                    ))}
+                  <div className="mb-4 pb-2 border-bottom border-warning border-opacity-25">
+                    <h3 className="fs-5 fw-bold text-warning mb-1 d-flex align-items-center gap-2">
+                      <span aria-hidden="true">{group.icon}</span>
+                      <span>{group.title}</span>
+                    </h3>
+                    <p className="text-white-50 fs-7 mb-0">{group.subtitle}</p>
                   </div>
 
+                  {/* وسوم المهارات */}
+                  <ul className="list-unstyled d-flex flex-wrap gap-2 mb-0">
+                    {group.skills.map((skill) => (
+                      <li
+                        key={skill}
+                        className={`px-3 py-1 rounded-pill border ${group.tagClass}`}
+                        style={{ fontSize: '0.9rem' }}
+                      >
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
               </div>

@@ -14,8 +14,9 @@ export default function Projects() {
         : 'Moroccan digital platform connecting event service providers with clients to organize events efficiently.',
       techStack: ["Next.js", "Python", "React"],
       githubUrl: "https://github.com/zakariyae-devcode/Mounasabati",
-      status: lang === 'ar' ? 'مكتمل' : 'Completed',
-      badgeColor: "bg-success"
+      status: 'completed',
+      demo: '',
+      image: ''
     },
     {
       title: lang === 'ar' ? 'متجر إلكتروني (E-commerce)' : 'E-commerce Store',
@@ -24,28 +25,31 @@ export default function Projects() {
         : 'Comprehensive e-commerce project providing a seamless shopping experience and robust structure.',
       techStack: ["Full-Stack", "Web Development", "Django", "Python"],
       githubUrl: "https://github.com/zakariyae-devcode/E-commerce",
-      status: lang === 'ar' ? 'مكتمل' : 'Completed',
-      badgeColor: "bg-success"
+      status: 'completed',
+      demo: '',
+      image: ''
     },
     {
-      title: lang === 'ar' ? 'نظام إدارة الشهادات (Management System Certificate)' : 'Certificate Management System',
+      title: lang === 'ar' ? 'نظام إدارة الشهادات (C# / Windows Forms)' : 'Certificate Management System (C# / Windows Forms)',
       description: lang === 'ar' 
         ? 'نظام رقمي متكامل لإدارة وإصدار الوثائق والشهادات الإدارية بدقة وسرعة.' 
         : 'Integrated digital system for managing and issuing administrative documents and certificates with precision.',
       techStack: ["Database", "C#", "SQL Server", "Windows Forms"],
       githubUrl: "https://github.com/zakariyae-devcode/ManagementSystemCertificate",
-      status: lang === 'ar' ? 'مكتمل' : 'Completed',
-      badgeColor: "bg-success"
+      status: 'completed',
+      demo: '',
+      image: ''
     },
     {
-      title: lang === 'ar' ? 'نظام إدارة الشهادات (SmartShahada)' : 'SmartShahada System',
+      title: lang === 'ar' ? 'منصة الشهادة الذكية SmartShahada (Laravel)، قيد التطوير' : 'SmartShahada (Laravel), in progress',
       description: lang === 'ar' 
         ? 'نظام رقمي قيد التطوير لإدارة الوثائق والشهادات الإدارية واستخراجها بدقة وسرعة لتبسيط الإجراءات.' 
         : 'Digital system under development for managing and generating administrative documents to simplify workflows.',
       techStack: ["Database", "Backend", "Frontend", "Laravel", "PHP"],
       githubUrl: "https://github.com/zakariyae-devcode/SmartShahada",
-      status: lang === 'ar' ? 'قيد التطوير' : 'In Development',
-      badgeColor: "bg-warning text-dark"
+      status: 'in-progress',
+      demo: '',
+      image: ''
     },
     {
       title: lang === 'ar' ? 'متجر الكتب (BookStore)' : 'BookStore Platform',
@@ -54,8 +58,9 @@ export default function Projects() {
         : 'Digital platform under development dedicated to book rentals and management.',
       techStack: ["Full-Stack", "Web Development", "Express.js", "JavaScript"],
       githubUrl: "https://github.com/zakariyae-devcode/bookStore",
-      status: lang === 'ar' ? 'قيد التطوير' : 'In Development',
-      badgeColor: "bg-warning text-dark"
+      status: 'in-progress',
+      demo: '',
+      image: ''
     },
     {
       title: lang === 'ar' ? 'واجهة برمجة تطبيقات السفر (TravelApi)' : 'Travel Booking API',
@@ -64,10 +69,25 @@ export default function Projects() {
         : 'Backend API under development designed for managing travel services and reservations with flexibility.',
       techStack: ["Backend", "API", "Python", "Django REST Framework"],
       githubUrl: "https://github.com/zakariyae-devcode/TravelApi",
-      status: lang === 'ar' ? 'قيد التطوير' : 'In Development',
-      badgeColor: "bg-warning text-dark"
+      status: 'in-progress',
+      demo: '',
+      image: ''
     }
   ];
+
+  // تسميات وألوان حالة المشروع
+  const statusStyles = {
+    completed: {
+      label: lang === 'ar' ? 'مكتمل' : 'Completed',
+      icon: '✓',
+      className: 'bg-success text-white border-success',
+    },
+    'in-progress': {
+      label: lang === 'ar' ? 'قيد التطوير' : 'In progress',
+      icon: '⏳',
+      className: 'bg-warning text-dark border-warning',
+    },
+  };
 
   return (
     <section id="projects" className={`py-5 text-white ${lang === 'ar' ? 'text-end' : 'text-start'}`}>
@@ -92,8 +112,8 @@ export default function Projects() {
 
         {/* شبكة عرض المشاريع */}
         <div className="row g-4">
-          {projectsList.map((project, index) => (
-            <div className="col-lg-4 col-md-6" key={index}>
+          {projectsList.map((project) => (
+            <div className="col-lg-4 col-md-6" key={project.githubUrl}>
               <div 
                 className="h-100 p-4 rounded-4 border border-warning border-opacity-25 position-relative shadow-lg d-flex flex-column justify-content-between overflow-hidden"
                 style={{
@@ -107,13 +127,32 @@ export default function Projects() {
                 </div>
 
                 <div>
-                  {/* رأس البطاقة (العنوان والحالة) */}
-                  <div className="d-flex justify-content-between align-items-start mb-3 gap-2">
-                    <h3 className="fs-5 fw-bold text-warning mb-0">{project.title}</h3>
-                    <span className={`badge ${project.badgeColor} bg-opacity-75 text-white fs-8 px-2 py-1`}>
-                      {project.status}
+                  {/* لقطة شاشة المشروع (تظهر فقط عند توفرها) */}
+                  {project.image && (
+                    <div className="mb-3 rounded-3 overflow-hidden border border-warning border-opacity-25">
+                      <img
+                        src={project.image}
+                        alt={lang === 'ar' ? `لقطة شاشة لمشروع ${project.title}` : `${project.title} screenshot`}
+                        className="w-100 object-fit-cover"
+                        style={{ aspectRatio: '16 / 9' }}
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+
+                  {/* حالة المشروع */}
+                  {statusStyles[project.status] && (
+                    <span
+                      className={`d-inline-flex align-items-center gap-1 badge rounded-pill border fw-bold px-3 py-2 mb-3 ${statusStyles[project.status].className}`}
+                      style={{ fontSize: '0.8rem' }}
+                    >
+                      <span aria-hidden="true">{statusStyles[project.status].icon}</span>
+                      <span>{statusStyles[project.status].label}</span>
                     </span>
-                  </div>
+                  )}
+
+                  {/* عنوان المشروع */}
+                  <h3 className="fs-5 fw-bold text-warning mb-3">{project.title}</h3>
 
                   {/* وصف المشروع */}
                   <p className="text-white-50 fs-7 lh-lg mb-4">
@@ -130,8 +169,19 @@ export default function Projects() {
                   </div>
                 </div>
 
-                {/* زر الانتقال لـ GitHub */}
-                <div>
+                {/* أزرار العرض المباشر وGitHub */}
+                <div className="d-flex flex-column gap-2">
+                  {project.demo && (
+                    <a 
+                      href={project.demo} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="btn btn-warning text-dark w-100 fw-bold py-2 rounded-pill d-flex align-items-center justify-content-center gap-2 fs-7"
+                    >
+                      <span>{lang === 'ar' ? 'عرض مباشر' : 'Live demo'}</span>
+                      <span>↗</span>
+                    </a>
+                  )}
                   <a 
                     href={project.githubUrl} 
                     target="_blank" 
