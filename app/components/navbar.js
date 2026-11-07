@@ -109,7 +109,7 @@ export default function Navbar() {
 
               {/* زر التواصل */}
               <a href="#contact" className="btn btn-warning rounded-top rounded-4 px-4 py-2 fw-bold text-dark d-flex align-items-center gap-2 shadow-sm">
-                <span>{lang === 'ar' ? 'تواصل معي' : 'Contact Me'}</span>
+                <span>{lang === 'ar' ? 'تواصل معي' : 'Contact-Me'}</span>
                 <span className="fs-6">۞</span>
               </a>
             </div>
