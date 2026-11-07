@@ -95,16 +95,17 @@ export default function Navbar() {
 
             <div className="d-flex justify-content-center align-items-center gap-2">
               {/* زر تبديل اللغة */}
-                <button 
-                  type="button"
-                  onClick={() => {
-                    console.log("Button clicked!");
-                    toggleLanguage();
-                  }}
-                  className="btn btn-outline-warning btn-sm px-3 py-1 fw-bold me-2"
-                >
-                {lang === 'ar' ? 'EN' : 'AR'}
-                </button>
+              <button
+                type="button"
+                onClick={toggleLanguage}
+                lang={lang === 'ar' ? 'en' : 'ar'}
+                aria-label={lang === 'ar' ? 'Switch to English' : 'التبديل إلى العربية'}
+                title={lang === 'ar' ? 'Switch to English' : 'التبديل إلى العربية'}
+                className="btn btn-outline-warning px-3 py-2 fw-bold me-2 rounded-pill d-inline-flex align-items-center gap-2 border-2"
+              >
+                <span aria-hidden="true">🌐</span>
+                <span>{lang === 'ar' ? 'English' : 'العربية'}</span>
+              </button>
 
               {/* زر التواصل */}
               <a href="#contact" className="btn btn-warning rounded-top rounded-4 px-4 py-2 fw-bold text-dark d-flex align-items-center gap-2 shadow-sm">

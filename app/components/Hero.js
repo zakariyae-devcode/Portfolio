@@ -33,9 +33,30 @@ export default function Hero() {
             </h1>
 
             {/* المسمى الوظيفي */}
-            <h2 className="fs-4 text-white-50 fw-medium mb-4">
-              {lang === 'ar' ? 'مطور برمجيات شامل ومصمم أنظمة ويب' : 'Full-Stack Developer & Web Systems Architect'}
+            <h2 className="fs-4 text-white fw-semibold mb-2">
+              {lang === 'ar'
+                ? 'مطور ويب شامل (Full-Stack) | Django، Laravel، Next.js'
+                : 'Full-Stack Developer | Django, Laravel, Next.js'}
             </h2>
+
+            {/* سطر تعريفي قصير */}
+            <p className="text-warning fs-5 fw-medium mb-3">
+              {lang === 'ar'
+                ? 'موظف إداري تحوّل إلى مطور ويب شامل، أبني أدوات تحل مشاكل حقيقية في سير العمل'
+                : 'Administrative employee turned full-stack developer, building tools that solve real workflow problems'}
+            </p>
+
+            {/* شارة الانفتاح على الفرص */}
+            <div className="mb-4">
+              <span className="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-success bg-opacity-25 border border-success border-opacity-50 text-white fs-7 fw-semibold">
+                <span
+                  className="d-inline-block rounded-circle bg-success"
+                  style={{ width: '8px', height: '8px', boxShadow: '0 0 8px rgba(25, 135, 84, 0.9)' }}
+                  aria-hidden="true"
+                ></span>
+                {lang === 'ar' ? 'متاح للوظائف المبتدئة والتدريب' : 'Open to junior roles & internships'}
+              </span>
+            </div>
 
             {/* الوصف الشخصي */}
             <p 
