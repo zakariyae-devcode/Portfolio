@@ -64,7 +64,7 @@ export default function About() {
                     {lang === 'ar' ? 'دعم كامل' : 'Full Support'}
                   </div>
                   <div className="text-white-50 fs-8">
-                    {lang === 'ar' ? 'قواعد البيانات والأنظمة' : 'Databases & Systems'}
+                    {lang === 'ar' ? 'قواعد البيانات والأنظمةتطبيقات الويب | هندسة قواعد البيانات والأنظمة' : 'Databases & Systems'}
                   </div>
                 </div>
               </div>
