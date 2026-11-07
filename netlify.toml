@@ -1,3 +1,9 @@
 [build]
   command = "npm run build"
   publish = ".next"
+
+# Run the Netlify Next.js adapter so the Next.js build output is turned into
+# routable pages and functions. Without it the raw .next folder is served as
+# static files and every route (including "/") returns "Page not found".
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
