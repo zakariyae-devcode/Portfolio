@@ -1,0 +1,36 @@
+{
+  "projects": [
+    {
+      "id": "mounasabati",
+      "title": "Mounasabati",
+      "image": "assets/projects/mounasabati.jpg",
+      "description": "Moroccan event services marketplace connecting clients with caterers, photographers, and event venues.",
+      "technologies": ["Django", "Django REST Framework", "Next.js", "Bootstrap", "SQLite"],
+      "github": "https://github.com/zakariyae-devcode/mounasabati"
+    },
+    {
+      "id": "order-tracker",
+      "title": "Order Tracker",
+      "image": "assets/projects/order-tracker.png",
+      "description": "Full-stack product and order management application with structured REST APIs and containerized deployment.",
+      "technologies": ["Django", "Django REST Framework", "PostgreSQL", "Docker", "Swagger", "Next.js"],
+      "github": "https://github.com/zakariyae-devcode/order-tracker"
+    },
+    {
+      "id": "tastescape",
+      "title": "TasteScape",
+      "image": "assets/projects/tastescape.png",
+      "description": "Recipe management and culinary sharing platform featuring user authentication, ratings, and moderation controls.",
+      "technologies": ["Express.js", "MongoDB", "Zod", "Docker", "Next.js", "Tailwind CSS"],
+      "github": "https://github.com/zakariyae-devcode/tastescape"
+    },
+    {
+      "id": "portfolio",
+      "title": "Bilingual Developer Portfolio",
+      "image": "assets/projects/portfolio.png",
+      "description": "Personal developer showcase presenting completed and ongoing applications alongside structured summaries and a downloadable CV.",
+      "technologies": ["Next.js", "Bootstrap", "HTML5", "CSS3"],
+      "github": "https://github.com/zakariyae-devcode/portfolio"
+    }
+  ]
+}

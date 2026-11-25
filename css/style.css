@@ -1,0 +1,447 @@
+.andalusian-navbar {
+  position: relative;
+  background-color: #0f2442;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3C!-- Outer Andalusian Star & Octagon --%3E%3Cpolygon points='60,10 74,24 94,24 94,44 108,58 94,72 94,92 74,92 60,106 46,92 26,92 26,72 12,58 26,44 26,24 46,24' stroke='%23d4af37' stroke-opacity='0.22' stroke-width='1.1'/%3E%3C!-- Inner Star --%3E%3Cpolygon points='60,26 84,58 60,90 36,58' stroke='%23d4af37' stroke-opacity='0.26' stroke-width='1'/%3E%3Cpolygon points='60,26 84,58 60,90 36,58' transform='rotate(45 60 58)' stroke='%232ea38b' stroke-opacity='0.24' stroke-width='1'/%3E%3C!-- Corner Interlace --%3E%3Cpath d='M0,0 L26,26 M120,0 L94,26 M0,120 L26,94 M120,120 L94,94' stroke='%23c86d51' stroke-opacity='0.18' stroke-width='1'/%3E%3Ccircle cx='60' cy='58' r='8' stroke='%23f3d376' stroke-opacity='0.3' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 110px 110px;
+  border-bottom: 5px solid transparent;
+  box-shadow: 0 6px 22px rgba(7, 17, 33, 0.35);
+}
+
+.andalusian-navbar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 5px;
+  background-color: #d4af37;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #d4af37 0px,
+    #d4af37 14px,
+    #1b6b5a 14px,
+    #1b6b5a 22px,
+    #b8583d 22px,
+    #b8583d 30px,
+    #0f2442 30px,
+    #0f2442 36px
+  );
+}
+/*------------------navbar---------------*/
+.andalusian-navbar .text-ivory {
+  color: #fbf8f1 !important;
+}
+
+.andalusian-navbar .text-gold {
+  color: #e6be4c !important;
+}
+
+.andalusian-navbar .brand-title {
+  letter-spacing: 0.4px;
+}
+
+.andalusian-crest {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.andalusian-crest::before,
+.andalusian-crest::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background-color: #091629;
+  border: 1.5px solid #e6be4c;
+  border-radius: 3px;
+}
+
+.andalusian-crest::after {
+  transform: rotate(45deg);
+  border-color: #34a88f;
+}
+
+.andalusian-navbar .andalusian-link {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.andalusian-navbar .andalusian-link:hover,
+.andalusian-navbar .andalusian-link:focus {
+  color: #e6be4c !important;
+}
+
+.andalusian-navbar .andalusian-toggler {
+  border-color: rgba(230, 190, 76, 0.5) !important;
+}
+
+.andalusian-navbar .navbar-toggler-icon {
+  filter: invert(1);
+}
+/*------------------header---------------*/
+.andalusian-moorish-header {
+  position: relative;
+  background-color: #f8f2e4;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(197, 155, 39, 0.16) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(15, 58, 93, 0.12) 0%, transparent 45%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3C!-- Interlaced Andalusian Star Lattice --%3E%3Cpolygon points='80,10 100,30 128,30 128,58 148,78 128,98 128,126 100,126 80,146 60,126 32,126 32,98 12,78 32,58 32,30 60,30' stroke='%23123254' stroke-opacity='0.09' stroke-width='1.15'/%3E%3Cpolygon points='80,30 116,78 80,126 44,78' stroke='%23b88622' stroke-opacity='0.18' stroke-width='1.1'/%3E%3Cpolygon points='80,30 116,78 80,126 44,78' transform='rotate(45 80 78)' stroke='%231b6b5a' stroke-opacity='0.15' stroke-width='1.1'/%3E%3Ccircle cx='80' cy='78' r='16' stroke='%23b8583d' stroke-opacity='0.14' stroke-width='1'/%3E%3Cpath d='M0,0 L32,32 M160,0 L128,32 M0,160 L32,128 M160,160 L128,128' stroke='%23b88622' stroke-opacity='0.14' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: auto, auto, 145px 145px;
+  border-bottom: 6px solid #123254;
+  box-shadow: inset 0 -4px 0 #c59b27;
+}
+
+.andalusian-kicker {
+  background-color: #123254;
+  color: #f2cf6b;
+  border: 1px solid #c59b27;
+  border-radius: 4px;
+  letter-spacing: 0.8px;
+}
+
+.andalusian-diamond {
+  width: 9px;
+  height: 9px;
+  background-color: #d97742;
+  transform: rotate(45deg);
+}
+
+.andalusian-moorish-title {
+  color: #102844;
+}
+
+.andalusian-name-accent {
+  color: #b54c2e;
+}
+
+.andalusian-moorish-lead {
+  color: #2f435c;
+  max-width: 56ch;
+}
+
+.andalusian-btn-royal {
+  background-color: #123254;
+  color: #fdf9f0;
+  border: 1.5px solid #123254;
+  border-radius: 6px;
+}
+
+.andalusian-btn-royal:hover,
+.andalusian-btn-royal:focus {
+  background-color: #1a4470;
+  border-color: #c59b27;
+  color: #f5d67b;
+}
+
+.andalusian-btn-arch {
+  background-color: #fdf9f0;
+  color: #123254;
+  border: 1.5px solid #b54c2e;
+  border-radius: 6px;
+}
+
+.andalusian-btn-arch:hover,
+.andalusian-btn-arch:focus {
+  background-color: #b54c2e;
+  border-color: #b54c2e;
+  color: #fdf9f0;
+}
+
+/* Moorish / Andalusian Arch Frame around the Portrait & Summary */
+.andalusian-arch-pavilion {
+  max-width: 410px;
+  padding: 8px;
+  border-radius: 210px 210px 18px 18px;
+  background:
+    linear-gradient(180deg, #c59b27 0%, #1b6b5a 52%, #b54c2e 100%);
+  box-shadow: 0 12px 28px rgba(16, 40, 68, 0.16);
+}
+
+.andalusian-arch-inner {
+  border-radius: 202px 202px 12px 12px;
+  background-color: #fffdf8;
+  border: 2px solid rgba(197, 155, 39, 0.55);
+}
+
+.andalusian-portrait-medallion {
+  width: 122px;
+  height: 122px;
+  padding: 4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #123254, #c59b27 50%, #b54c2e);
+}
+
+.andalusian-portrait-medallion img {
+  border-radius: 50%;
+  border: 3px solid #fffdf8;
+}
+
+.andalusian-pavilion-name {
+  color: #102844;
+}
+
+.andalusian-pavilion-role {
+  color: #1b6b5a;
+  font-weight: 600;
+}
+
+.andalusian-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c59b27 25%, #b54c2e 50%, #c59b27 75%, transparent);
+}
+
+.andalusian-spec-row {
+  background-color: #f8f2e4;
+  border-left: 3px solid #123254;
+}
+
+.andalusian-spec-key {
+  color: #123254;
+}
+
+.andalusian-spec-val {
+  color: #3c4f65;
+}
+
+
+/*-----------About--------------*/
+.andalusian-about {
+  position: relative;
+  background-color: #fbf8f1;
+  background-image:
+    radial-gradient(circle at 90% 15%, rgba(197, 155, 39, 0.12) 0%, transparent 36%),
+    radial-gradient(circle at 10% 85%, rgba(27, 107, 90, 0.1) 0%, transparent 40%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='60,12 75,27 96,27 96,48 111,63 96,78 96,99 75,99 60,114 45,99 24,99 24,78 9,63 24,48 24,27 45,27' stroke='%23123254' stroke-opacity='0.06' stroke-width='1'/%3E%3Cpolygon points='60,28 88,63 60,98 32,63' stroke='%23c59b27' stroke-opacity='0.12' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: auto, auto, 125px 125px;
+  border-bottom: 1px solid rgba(197, 155, 39, 0.3);
+}
+
+.andalusian-section-tag {
+  background-color: rgba(18, 50, 84, 0.08);
+  color: #123254;
+  border: 1px solid rgba(197, 155, 39, 0.6);
+  border-radius: 4px;
+  letter-spacing: 0.8px;
+}
+
+.andalusian-about-heading {
+  color: #102844;
+}
+
+.andalusian-about-intro {
+  color: #364966;
+}
+
+.andalusian-about-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(197, 155, 39, 0.38);
+  box-shadow: 0 6px 20px rgba(16, 40, 68, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.andalusian-about-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(16, 40, 68, 0.11);
+}
+
+.andalusian-card-bar {
+  width: 48px;
+  height: 4px;
+  background-color: #123254;
+  border-radius: 2px;
+}
+
+.andalusian-card-bar--emerald {
+  background-color: #1b6b5a;
+}
+
+.andalusian-card-bar--terracotta {
+  background-color: #b54c2e;
+}
+
+.andalusian-about-title {
+  color: #102844;
+}
+
+.andalusian-about-text {
+  color: #4a5d75;
+  line-height: 1.65;
+}
+
+/*--------------Skils------------*/
+.andalusian-skills {
+  position: relative;
+  background-color: #f8f2e4;
+  background-image:
+    radial-gradient(circle at 12% 20%, rgba(197, 155, 39, 0.14) 0%, transparent 38%),
+    radial-gradient(circle at 88% 80%, rgba(181, 76, 46, 0.1) 0%, transparent 40%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='70,12 86,28 108,28 108,50 124,66 108,82 108,104 86,104 70,120 54,104 32,104 32,82 16,66 32,50 32,28 54,28' stroke='%23123254' stroke-opacity='0.06' stroke-width='1.1'/%3E%3Cpolygon points='70,30 98,66 70,102 42,66' transform='rotate(45 70 66)' stroke='%231b6b5a' stroke-opacity='0.11' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: auto, auto, 135px 135px;
+  border-bottom: 1px solid rgba(197, 155, 39, 0.32);
+}
+
+.andalusian-skills-tag {
+  background-color: #123254;
+  color: #f2cf6b;
+  border: 1px solid #c59b27;
+  border-radius: 4px;
+  letter-spacing: 0.8px;
+}
+
+.andalusian-skills-heading {
+  color: #102844;
+}
+
+.andalusian-skills-subtitle {
+  color: #364966;
+}
+
+.andalusian-skill-panel {
+  background-color: #fffdf8;
+  border: 1px solid rgba(197, 155, 39, 0.42);
+  box-shadow: 0 8px 22px rgba(16, 40, 68, 0.06);
+}
+
+.andalusian-panel-head {
+  border-bottom: 1px solid rgba(197, 155, 39, 0.35);
+}
+
+.andalusian-panel-title {
+  color: #102844;
+}
+
+.andalusian-panel-marker {
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+  display: inline-block;
+}
+
+.marker-gold {
+  background-color: #c59b27;
+}
+
+.marker-emerald {
+  background-color: #1b6b5a;
+}
+
+.marker-terracotta {
+  background-color: #b54c2e;
+}
+
+.andalusian-skill-chip {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  letter-spacing: 0.2px;
+}
+
+.chip-navy {
+  background-color: #123254;
+  color: #fbf8f1;
+  border: 1px solid rgba(197, 155, 39, 0.45);
+}
+
+.chip-emerald {
+  background-color: #16594b;
+  color: #fbf8f1;
+  border: 1px solid rgba(242, 207, 107, 0.4);
+}
+
+.chip-terracotta {
+  background-color: #9e4228;
+  color: #fbf8f1;
+  border: 1px solid rgba(242, 207, 107, 0.4);
+}
+
+.chip-gold {
+  background-color: #f4e6c1;
+  color: #102844;
+  border: 1px solid #c59b27;
+}
+
+/*----------project----------------*/
+.andalusian-projects-section {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+.andalusian-badge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: #e6b85c;
+  border: 1px solid rgba(230, 184, 92, 0.45);
+  border-radius: 999px;
+  background-color: rgba(230, 184, 92, 0.08);
+}
+
+.andalusian-heading {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.andalusian-divider {
+  width: 90px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #e6b85c, #14b8a6, transparent);
+  border-radius: 2px;
+}
+
+.andalusian-card {
+  background: linear-gradient(180deg, #16213e 0%, #11192d 100%);
+  border: 1px solid rgba(230, 184, 92, 0.28);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.andalusian-card:hover {
+  transform: translateY(-6px);
+  border-color: #e6b85c;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+}
+
+.andalusian-card-img {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(230, 184, 92, 0.35);
+}
+
+.andalusian-card-title {
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+.andalusian-card-desc {
+  color: #cbd5e1;
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.andalusian-tech-tag {
+  background-color: rgba(20, 184, 166, 0.14);
+  color: #5eead4;
+  border: 1px solid rgba(94, 234, 212, 0.28);
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.28rem 0.6rem;
+  border-radius: 6px;
+}
+
+.btn-andalusian-github {
+  color: #f8fafc;
+  border: 1px solid #e6b85c;
+  background-color: rgba(230, 184, 92, 0.1);
+  font-weight: 600;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-andalusian-github:hover {
+  background-color: #e6b85c;
+  color: #0f172a;
+}
