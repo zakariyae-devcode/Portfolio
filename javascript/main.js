@@ -58,3 +58,28 @@ async function loadProjects() {
 }
 
 document.addEventListener("DOMContentLoaded", loadProjects);
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const feedback = document.getElementById("contactFeedback");
+
+  if (!form || !feedback) return;
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.classList.add("was-validated");
+      feedback.className = "alert alert-danger mt-3";
+      feedback.textContent = "Please fill in all required fields with a valid email address.";
+      return;
+    }
+
+    feedback.className = "alert alert-success mt-3";
+    feedback.textContent = "Thank you! Your message has been prepared successfully.";
+    form.reset();
+    form.classList.remove("was-validated");
+  });
+});

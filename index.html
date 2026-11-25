@@ -285,7 +285,195 @@
 
     <div id="projects-grid" class="row g-4"></div>
   </div>
-</section>
+   </section>
+   <!----------------Contact------>
+   <section id="contact" class="py-5 andalusian-contact-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="andalusian-badge">GET IN TOUCH</span>
+      <h2 class="andalusian-heading mt-2">Contact Me</h2>
+      <div class="andalusian-divider mx-auto mb-3"></div>
+      <p class="andalusian-subtitle mx-auto">
+        Open to full-stack software development opportunities, freelance collaborations, and technical discussions.
+      </p>
+    </div>
+
+    <div class="row g-4 align-items-stretch">
+      <!-- بطاقة معلومات التواصل -->
+      <div class="col-12 col-lg-5">
+        <div class="andalusian-contact-card h-100 p-4 p-md-5 d-flex flex-column justify-content-between">
+          <div>
+            <h3 class="h4 andalusian-card-title mb-3">Direct Channels</h3>
+            <p class="andalusian-card-desc mb-4">
+              Feel free to reach out directly through email or explore my code repositories on GitHub.
+            </p>
+
+            <ul class="list-unstyled d-flex flex-column gap-3 mb-4">
+              <li class="andalusian-info-item">
+                <span class="andalusian-info-label d-block">Location</span>
+                <span class="andalusian-info-value">Morocco</span>
+              </li>
+              <li class="andalusian-info-item">
+                <span class="andalusian-info-label d-block">Email</span>
+                <a href="zakariyae.abbih.dev@gmail.com" class="andalusian-link">
+                  @zakariyaeabbih.dev
+                </a>
+              </li>
+              <li class="andalusian-info-item">
+                <span class="andalusian-info-label d-block">GitHub Profiles</span>
+                <div class="d-flex flex-wrap gap-2 mt-1">
+                  <a href="https://github.com/zakariyae-devcode" target="_blank" rel="noopener noreferrer" class="andalusian-social-pill">
+                    @zakariyae-devcode ↗
+                  </a>
+                 
+                </div>
+               
+              </li>
+               <li class="andalusian-info-item">
+                <span class="andalusian-info-label d-block">linkedin Profiles</span>
+                <div class="d-flex flex-wrap gap-2 mt-1">
+                  <a href="https://www.linkedin.com/in/zakariyae-abbih/" target="_blank" rel="noopener noreferrer" class="andalusian-social-pill">
+                    @zakariyae-devcode ↗
+                  </a>
+                 
+                </div>
+               
+              </li>
+            </ul>
+          </div>
+
+          <div class="andalusian-quote-box p-3">
+            <p class="mb-0 small">
+              “Crafted with clean architecture, scalable APIs, and timeless Moroccan-Andalusian inspiration.”
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- نموذج المراسلة -->
+      <div class="col-12 col-lg-7">
+        <div class="andalusian-contact-card h-100 p-4 p-md-5">
+          <h3 class="h4 andalusian-card-title mb-4">Send a Message</h3>
+          <form id="contactForm" novalidate>
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label for="senderName" class="form-label andalusian-label">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control andalusian-input"
+                  id="senderName"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label for="senderEmail" class="form-label andalusian-label">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control andalusian-input"
+                  id="senderEmail"
+                  name="email"
+                  placeholder="name@example.com"
+                  required
+                />
+              </div>
+
+              <div class="col-12">
+                <label for="messageSubject" class="form-label andalusian-label">Subject</label>
+                <input
+                  type="text"
+                  class="form-control andalusian-input"
+                  id="messageSubject"
+                  name="subject"
+                  placeholder="Project inquiry, job opportunity, or collaboration"
+                  required
+                />
+              </div>
+
+              <div class="col-12">
+                <label for="messageBody" class="form-label andalusian-label">Message</label>
+                <textarea
+                  class="form-control andalusian-input"
+                  id="messageBody"
+                  name="message"
+                  rows="5"
+                  placeholder="Write your message here..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="col-12 pt-2">
+                <button type="submit" class="btn btn-andalusian-submit w-100">
+                  Send Message
+                </button>
+              </div>
+            </div>
+
+            <div id="contactFeedback" class="mt-3 d-none" role="alert"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+   </section>
+   <!------------footer---------------->
+   <footer class="andalusian-footer pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4 pb-4 andalusian-footer-top">
+            <!-- التعريف السريع -->
+            <div class="col-12 col-lg-5">
+                <h3 class="h5 andalusian-footer-brand mb-2">Zakariyae Abbih</h3>
+                <p class="andalusian-footer-text mb-3">
+                Full-stack web developer building modern applications and RESTful APIs with a touch of Moroccan-Andalusian craft.
+                </p>
+                <div class="andalusian-mini-motif" aria-hidden="true"></div>
+            </div>
+
+            <!-- روابط التنقل -->
+            <div class="col-6 col-lg-3">
+                <h4 class="h6 andalusian-footer-heading mb-3">Navigation</h4>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                <li><a href="#home" class="andalusian-footer-link">Home</a></li>
+                <li><a href="#about" class="andalusian-footer-link">About</a></li>
+                <li><a href="#skills" class="andalusian-footer-link">Skills</a></li>
+                <li><a href="#projects" class="andalusian-footer-link">Projects</a></li>
+                <li><a href="#contact" class="andalusian-footer-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- الروابط الخارجية -->
+            <div class="col-6 col-lg-4">
+                <h4 class="h6 andalusian-footer-heading mb-3">Profiles &amp; Code</h4>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                <li>
+                    <a href="https://github.com/zakariyae-devcode" target="_blank" rel="noopener noreferrer" class="andalusian-footer-link">
+                    GitHub (@zakariyae-devcode) ↗
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/zakariyae1889" target="_blank" rel="noopener noreferrer" class="andalusian-footer-link">
+                    GitHub (@zakariyae1889) ↗
+                    </a>
+                </li>
+                </ul>
+            </div>
+            </div>
+
+            <!-- سطر الحقوق السفلي -->
+            <div class="pt-3 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 andalusian-footer-bottom">
+            <p class="mb-0 small">
+                &copy; <span id="currentYear">2026</span> Zakariyae Abbih. All rights reserved.
+            </p>
+            <p class="mb-0 small">
+                Built with HTML5, CSS3 &amp; Bootstrap 5
+            </p>
+            </div>
+        </div>
+    </footer>
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="javascript/main.js"></script>
 </body>
