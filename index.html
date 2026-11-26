@@ -355,6 +355,9 @@
         <div class="andalusian-contact-card h-100 p-4 p-md-5">
           <h3 class="h4 andalusian-card-title mb-4">Send a Message</h3>
           <form id="contactForm" novalidate>
+            <!-- حقل مخفي لمنع السبام -->
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
             <div class="row g-3">
               <div class="col-12 col-md-6">
                 <label for="senderName" class="form-label andalusian-label">Full Name</label>
@@ -405,7 +408,7 @@
               </div>
 
               <div class="col-12 pt-2">
-                <button type="submit" class="btn btn-andalusian-submit w-100">
+                <button type="submit" id="submitBtn" class="btn btn-andalusian-submit w-100">
                   Send Message
                 </button>
               </div>

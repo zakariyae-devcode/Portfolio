@@ -83,3 +83,65 @@ document.addEventListener("DOMContentLoaded", () => {
     form.classList.remove("was-validated");
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const feedback = document.getElementById("contactFeedback");
+  const submitBtn = document.getElementById("submitBtn");
+
+  // ضع بريدك الإلكتروني الذي تريد استقبال الرسائل عليه هنا
+  const DESTINATION_EMAIL = "your-email@example.com";
+
+  if (!form || !feedback || !submitBtn) return;
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.classList.add("was-validated");
+      feedback.className = "alert alert-danger mt-3";
+      feedback.textContent = "Please fill in all required fields with a valid email address.";
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    const formData = new FormData(form);
+    const payload = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      _subject: formData.get("subject"),
+      message: formData.get("message"),
+      _captcha: "false"
+    };
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${DESTINATION_EMAIL}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        feedback.className = "alert alert-success mt-3";
+        feedback.textContent = "Thank you! Your message has been sent directly to my email.";
+        form.reset();
+        form.classList.remove("was-validated");
+      } else {
+        throw new Error("Failed to send");
+      }
+    } catch (error) {
+      feedback.className = "alert alert-danger mt-3";
+      feedback.textContent = "Something went wrong while sending your message. Please try again later.";
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Send Message";
+    }
+  });
+});
